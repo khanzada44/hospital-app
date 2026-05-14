@@ -1,0 +1,88 @@
+// Variables
+$primary-color: #3f51b5;
+$white: #ffffff;
+
+.login-wrapper {
+  display: flex;
+  width: 100vw;   // Poori screen ki width
+  height: 100vh;  // Poori screen ki height
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+
+  .login-container {
+    display: flex;
+    width: 100%;  // Container poori width lega
+    height: 100%; // Container poori height lega
+    background: $white;
+    // Border-radius aur box-shadow hata diya taake full screen lage
+
+    // Left Side: Form Section
+    .form-section {
+      flex: 0.7; 
+      padding: 0 10%; // Side se achi space dene ke liye
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; // Content ko left align rakhne ke liye
+
+      h2 {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: #666;
+        margin-bottom: 40px;
+      }
+
+      mat-form-field {
+        width: 100%;
+        max-width: 450px; // Form ko bohat zyada wide hone se rokne ke liye
+        margin-bottom: 10px;
+      }
+
+      .login-btn {
+        width: 100%;
+        max-width: 450px;
+        height: 50px;
+        margin-top: 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+    }
+
+    // Right Side: Image Section
+    .image-section {
+      flex: 1.2; // Image area thora bada dikhega
+      background: #f0f2f5;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Ye image ko poore area me fill karega
+        display: block;
+      }
+    }
+  }
+}
+
+// Mobile View
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    
+    .image-section {
+      display: none; // Mobile par sirf form rahega
+    }
+
+    .form-section {
+      padding: 40px 20px;
+      align-items: center; // Mobile par center align achi lagti hai
+      
+      mat-form-field, .login-btn {
+        max-width: 100%;
+      }
+    }
+  }
+}

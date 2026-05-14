@@ -3,7 +3,7 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { Header } from './layout/admin-layout/layout/admin-layout/header/header';
+import { Header } from '../app/layout/admin-layout/header/header';
 import { Sidebar } from './layout/admin-layout/sidebar/sidebar';
 
 @NgModule({
